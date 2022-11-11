@@ -1,0 +1,296 @@
+:root {
+  --shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+/*    heaader  */
+
+.container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.container header img {
+  max-width: 12rem;
+}
+
+header nav{
+    display: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+header nav ul li span{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+header .logo{
+    transition: all 300ms ease;
+}
+
+
+header div:nth-last-child(1){
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header div:nth-last-child(1) img{
+    width: 3rem;
+    border-radius: 50%;
+}
+
+
+.logout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.logout .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.logout .profile img {
+  border: 2px dotted blue;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.logout .profile div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout .profile div:nth-child(2) {
+  justify-self: flex-end;
+  width: 2rem;
+  cursor: pointer;
+}
+
+.logout div {
+  width: 100%;
+}
+
+.logout div button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.7rem 0rem;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  background: rgb(124, 87, 190);
+  color: white;
+}
+
+.logout div button:hover {
+  background: rgb(97, 55, 177);
+}
+
+/* -----------Aside--------- */
+main {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 2rem;
+  position: sticky;
+  top: 0px;
+}
+
+main section {
+  /* background: #000; */
+}
+
+main aside {
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 425px;
+  z-index: 100;
+  display: none;
+  padding: 0 .5rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: aliceblue;
+  transition: all 300ms ease;
+  animation: menu 300ms linear 0s 1 forwards;
+}
+
+main aside .side-container {
+  /* position: fixed; */
+  top: 0;
+  bottom: 0;
+  left: 2.25rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main aside button#close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 100%;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+main aside button#close-btn img{
+  max-width: 12rem;
+  /* max-width: calc(100% - 5rem); */
+}
+
+main aside .sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  position: relative;
+  height: 3rem;
+}
+
+main aside .sidebar a span {
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  transition: all 300ms ease;
+}
+
+main aside .sidebar a.active {
+  background: rgb(255, 255, 255);
+  box-shadow: var(--shadow);
+}
+
+main aside .sidebar a.active::before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  background: rgb(73, 55, 153);
+}
+
+main aside .sidebar a:hover {
+  box-shadow: var(--shadow);
+}
+
+main aside .sidebar a:hover span {
+  margin-left: 1.8rem;
+}
+
+main aside .sidebar h4 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  text-decoration: none;
+  border: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Open sans", sans-serif;
+  /* min-height: 100vh; */
+  font-size: 14px;
+  padding-bottom: 1rem;
+  /* background-color: rgb(212, 212, 212) */
+}
+
+.container {
+  width: 95%;
+  /* background-color: rgb(212, 212, 212) */
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+  /* main{
+        grid-template-columns: auto;
+    } */
+  main aside {
+    box-shadow: 2px 0px 3px .5px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    max-width: 769px;
+  }
+  main aside {
+    width: 60%;
+  }
+  .container header img {
+    max-width: 17rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  main {
+    grid-template-columns: 16rem auto;
+  }
+  main aside {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    box-shadow: none;
+
+  }
+  main aside button#close-btn {
+    display: none;
+  }
+  header div.menu {
+    display: none;
+  }
+  header nav{
+    display: flex;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+  main {
+    grid-template-columns: 16rem auto 20rem;
+  }
+}
+
+@keyframes menu {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}

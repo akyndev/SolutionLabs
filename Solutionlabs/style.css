@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+main section.middle .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main section.middle .header input[type="date"]{
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    background: #fff;
+
+}
+
+main section.middle .cards{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1.5rem;
+}
+
+main section.middle .cards .card{
+    /* background-color: rgb(204, 194, 194); */
+    padding: .5rem;
+    border-radius: 5px;
+    /* height: 16rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    transition: all 300ms ease;
+}
+
+main section.middle .cards .card:hover{
+    /* border: 1px solid red; */
+    box-shadow: none;
+}
+
+main section.middle .cards .card .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+main section.middle .cards .card .top h4 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+main section.middle .cards .card .top img{
+    width: 2rem;
+    border-radius: 5px;
+}
+
+
+main section.middle .card .bottom{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main section.middle .card .bottom div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+main section.middle .card .bottom div h3{
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+main section.middle .card .bottom div .left{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: .2rem;
+}
+
+main section.middle .card .bottom div .left .i{
+    font-size: 8px;
+}
+main section.middle .card .bottom .right{
+    display: flex;
+    gap: 2rem;
+}
+
+main .monthly-report{
+    display: grid;
+    grid-template-columns: auto auto  ;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+main .monthly-report h4{
+    color: rgb(77, 77, 77);
+    font-weight: 600;
+}
+
+main .monthly-report .report{
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+main .monthly-report p{
+    color: rgb(124, 106, 106);
+}
+
+details h1{
+    font-weight: 600;
+}
+/* -------- Option ------ */
+
+
+main .options{
+    margin-top: 1rem;
+
+}
+
+main .options h3{
+    font-weight: 600;
+}
+
+main .options h4, main .options h5{
+    font-weight: 600;
+}
+
+main .options .badges{
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+main .options .badges .badge:nth-child(1) span{
+    background: #fff;
+}
+
+main .options .badge span{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000;
+}
+
+main .options .badge{
+    padding: .5rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+main .options .badge:first-child span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 1.5rem;
+}
+
+main .options .badge div{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+main .options .badge:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+/* chart */
+
+canvas#chart{
+    max-width: 100%;
+    margin-top: 2rem;
+    padding: .5rem;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid rgb(209, 206, 206);
+}
+
+/* Invements */ 
+
+main section.right .investments{
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+main section.right .investments img{
+    width: 2.4rem;
+}
+
+main section.right .investments .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+
+main section.right .investments .header a{
+    display: flex;
+    align-items: center;
+    
+}
+
+main section.right .investments .investment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    border-top: 1px solid rgb(216, 213, 213);
+    /* border-bottom: 1px solid rgb(184, 181, 181); */
+    transition: all 300ms ease;
+}
+
+main section.right .investments .investment:last-child {
+    /* border: none; */
+}
+
+main section.right .investments .investment:hover{
+    background: rgb(218, 216, 216);
+}
+
+
+main section.right .search{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2rem;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: var(--shadow);
+    padding: .5rem;
+}
+
+main section.right .search .header{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main section.right .search .header a{
+    display: flex;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    outline: none;
+    margin-top: 1rem;
+}
+
+th{
+    font-weight: 600;
+    padding: .5rem 0rem;
+}
+
+td{
+    font-size: 12px;
+    padding: .5rem 0rem;
+
+}
+
+table tr:nth-child(1){
+    background: rgb(218, 216, 216);
+}
+
+table tr{
+    margin: .5rem 0rem;
+}
+
+h1{
+    font-weight: 700;
+}
+
+table tr:hover{
+    background: rgb(218, 216, 216);
+}
+
+
+
+
+
+
+@media (min-width: 640px) {
+
+}
+
+@media (min-width: 769px) {
+    
+}
+
+@media (min-width: 1024px) {
+    main section.middle .cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    main section.right{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        gap: 2rem;    
+        /* background: #000;    */
+    }
+    main section.right .search{
+        margin-top: 0;
+    }
+ 
+}
+
+@media (min-width: 1280px) {
+    .space{
+        display: none;
+    }
+    main section.right{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
